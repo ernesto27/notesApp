@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+   
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <title>Hello World</title>
+        <style type="text/css">
+            .mybutton{
+                background:#E95B5B;
+                color:white;
+            }
+
+            #list-notes{
+                margin-top: 10px;
+            }
+
+            #label-text{
+                color: #727272;
+                font-family: georgia;
+                font-size: 1.3em; 
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div data-role="page" id="index"> 
+            <div data-role="header" data-position="fixed">
+                <h1 >NOTES APP</h1>
+
+            </div> 
+            <div data-role="content">
+                <a href="#add" data-role="button" style="background:#70C522; color:white; border-color:none">
+                Add note</a>
+                
+               
+                <p id="feed"></p>
+                <ul data-role="listview" id="list-notes">
+                  
+                </ul>
+         
+            </div> 
+            <div data-role="footer" data-position="fixed">
+              
+            </div> 
+        </div>
+
+
+        <!-- PAGE ADD NOTE -->
+          <div data-role="page" id="add"> 
+            <div data-role="header" data-position="fixed" >
+                <a href="#index" data-role="button" data-icon="back" data-theme="b">Back</a>
+                <h1 >ADD NOTE</h1>
+               
+            </div> 
+
+            <div data-role="content">
+                <form>
+                    <label for="textarea-a" id="label-text">Insert note</label>
+                    <textarea name="textarea" cols="55" rows="50" id="text-note"> </textarea>
+                    <a data-role="button" id="save-note" data-rel="back">Send </a> 
+                </form>
+            </div> 
+            <div data-role="footer" data-position="fixed">
+                
+            </div> 
+        </div>
+
+
+
+        <!-- SINGLE PAGE NOTE -->
+         <div data-role="page" id="single"> 
+            <div data-role="header" data-position="fixed" >
+                <a href="#index" data-role="button" data-icon="back" data-theme="b">Back</a>
+                <h1>Single note</h1>
+               
+            </div> 
+
+            <div data-role="content" id="content-single">
+              <p id="single-note"></p>
+
+              <a href="index.html" data-role="button" style="background:red; color:#fff" data-icon="delete" data-theme="b">Delete</a>
+            </div> 
+            <div data-role="footer" data-position="fixed">
+                
+            </div> 
+        </div>
+
+
+        <script type="text/tmpl" id="note-tmpl">
+
+        </script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <script type="text/javascript">
+            
+        </script>
+       
+    </body>
+</html>
